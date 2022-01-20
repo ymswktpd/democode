@@ -50,6 +50,12 @@ public class EmployeeService {
         return userMapper.selectList(userLambdaQueryWrapper);
     }
 
+    /**
+     * 分页
+     * @param start
+     * @param limit
+     * @return
+     */
     public List<User> queryPage(Integer start,Integer limit){
         Page<User> page = new Page<>();
         page.setCurrent(start);
