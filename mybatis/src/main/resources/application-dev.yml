@@ -4,6 +4,10 @@ spring:
   datasource:
     driver-class-name: org.sqlite.JDBC
     url: jdbc:sqlite:D:\workspace\democode\sqlite3\demo.db
-mybatis:
-  mapper-locations: Mapper/*Mapper.xml
+mybatis-plus:
+  mapper-locations: classpath:Mapper/*Mapper.xml
+#  config-location: classpath:mybatis-config/mybatis-config.xml
   type-aliases-package: com.example.entity
+  configuration:
+    cache-enabled: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

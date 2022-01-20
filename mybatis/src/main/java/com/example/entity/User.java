@@ -9,12 +9,9 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee implements Serializable {
-    private String id;
-
+public class User implements Serializable {
+    private Long id;
     private String name;
-
-    private String code;
-
-
+    private Integer age;
+    private String email;
 }

@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @dte: 2022/1/19
  */
 @SpringBootApplication
-@MapperScan(basePackages = {"com.*"})
+@MapperScan("com.example.*")
 public class SpringbootApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringbootApplication.class,args);

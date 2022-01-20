@@ -9,11 +9,16 @@
   <sql id="Base_Column_List">
     id, name, code
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select 
+  <cache />
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultType="Employee">
+    select
     <include refid="Base_Column_List" />
     from employee
-    where id = #{id,jdbcType=VARCHAR}
+        <where>
+          <if test="id != null">
+            id = #{id,jdbcType=VARCHAR}
+          </if>
+        </where>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from employee
